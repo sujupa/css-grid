@@ -1,0 +1,41 @@
+body{
+    background-color: blanchedalmond;
+}
+
+div{
+    border: 1px solid crimson;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+
+    /* justify-items: center;
+    align-items: center; */
+}
+
+.header{
+    grid-column: 1 / -1;
+}
+
+.menu{
+    grid-row: 2 / 3;
+}
+
+.content{
+    grid-column: 2 / -1;
+    /* justify-self: center;
+    align-self: center; */
+}
+
+.footer{
+    grid-column: 1 / -1;
+}
