@@ -15,27 +15,22 @@ div{
     height: 100%;
     display: grid;
     grid-gap: 3px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
-    /* grid-template: repeat(2, 50px) / repeat(2, 1fr); */
-    grid-template-areas: 
-        "m h h h h h h h h h h h"
-        "m c c c c c c c c c c c"
-        "f f f f f f f f f f f f";
+    grid-template-columns:[main-start] 1fr [content-start] 5fr [content-end main-end];
+    grid-template-rows: [main-start] 40px [content-start] 300px [content-end] 40px [main-end];
 }
 
 .header{
-    grid-area: h;
+    grid-column: main;
 }
 
 .menu{
-   grid-area: m;
+    grid-column: main-start / content-start;
 }
 
 .content{
-    grid-area: c;
+    grid-column: content;
 }
 
 .footer{
-    grid-area: f;
+    grid-column: main;
 }
